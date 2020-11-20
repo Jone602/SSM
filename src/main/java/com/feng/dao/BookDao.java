@@ -15,4 +15,6 @@ public interface BookDao {
     Books getBookById(@Param("bookId") int id);
 
     List<Books> getBooksList();
+
+    Books queryBookByName(String bookName);
 }

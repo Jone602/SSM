@@ -21,6 +21,7 @@ public class BooksServiceImpl implements BooksService {
     }
 
     public int updateBook(Books books) {
+        System.out.println("BooksServiceImpl books==>"+books);
         return bookDao.updateBook(books);
     }
 
@@ -31,5 +32,9 @@ public class BooksServiceImpl implements BooksService {
     public List<Books> getBooksList() {
         List<Books> booksList = bookDao.getBooksList();
         return booksList;
+    }
+
+    public Books queryBookByName(String bookName) {
+        return bookDao.queryBookByName(bookName);
     }
 }
